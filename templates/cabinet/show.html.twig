@@ -1,0 +1,21 @@
+{% extends 'base2.html.twig' %}
+{% block body %}
+<br>
+<div class="card text-center">
+  <div class="card-header" style="color:olive;">
+    Details
+  </div>
+  <div class="card-body" style="background-color:white;">
+    <h5 class="font-weight-bold" style="color:grey;">- Ticket N° {{ cabinet.id }} -</h5><br>
+    <p class="card-text"style="color:teal;">-nom-<p> {{cabinet.nom }}</p></p>
+    <p class="card-text"style="color:teal;">-prenom-<p>{{ cabinet.prenom}}</p></p>
+    <p class="card-text"style="color:teal;">-cin- <p>{{ cabinet.cin }}</p></p>
+    <p class="card-text"style="color:teal;">-NumDeFichePatient- <p>{{ Patient.NumDeFichePatient }}</p>
+      </p> 
+    <a href="/" class="btn btn-primary" style="background-color:teal;">Return to list</a>
+  </div>
+  <div class="card-footer text-muted"></br>
+  
+  </div>
+</div>
+  

@@ -1,0 +1,45 @@
+{% extends 'base2.html.twig' %}
+{% block title%} Liste des Patients{% endblock %}
+
+{% block body %}
+<h1>Liste des Patients</h1><br>
+
+ 
+    <table id="patients" class="table table-striped">
+      <thead>
+        <tr>
+          <th>id</th>
+          <th>nom</th>
+          <th>prenom</th>
+          <th>cin</th>
+          <th>NumDeFichePatient</th>
+          <th>sexe</th>
+          <th>NumDeTelephone</th>
+        </tr>
+      </thead>
+      
+        {% for cabinet in cab %}
+          <tr>
+            <td>{{ cabinet.id}}</td>
+            <td>{{ cabinet.nom }}</td>
+            <td>{{ cabinet.prenom}}</td>
+            <td>{{ cabinet.cin}}</td>
+           
+            <td>{{ cabinet.NumDeFichePatient}}</td>
+            <td>{{ cabinet.sexe}}</td>
+            <td>{{ cabinet.NumDeTelephone}}</td>
+
+           
+           
+           <td>
+              <a href="/cabinet/{{ cabinet.id }}" class="btn btn-primary"style="background-color:black;">Details</a>
+              <a href="/cabinet/edit/{{cabinet.id }}" class="btn btn-primary" style="background-color:black;">Edit</a>
+              <a href="/cabinet/delete/{{ cabinet.id }}" class="btn btn-primary" style="background-color:black;"
+              onclick="return confirm('U sure u want to drop this patient?');">Drop</a>
+            </td>
+          </tr>
+        {% endfor %}
+    
+    </table>
+  
+{% endblock %}

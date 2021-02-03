@@ -1,0 +1,11 @@
+{% extends 'base2.html.twig' %}
+
+{% block title %}Edit{% endblock %}
+
+{% block body %}
+<h1>Edit Patient</h1>
+ {{ form_start(form) }}
+ {{ form_widget(form) }}
+   <button type="submit" class="btn btn-success" style="background-color:teal;">Edit</button>
+ {{ form_end(form) }}
+{% endblock %}
